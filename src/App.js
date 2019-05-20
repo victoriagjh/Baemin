@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
+import {HashRouter,Route} from "react-router-dom";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import ScrollToTop from './ScrollToTop';
+import Home from './Home';
+import SignUp from './SignUp';
+import Login from './Login';
+import MyShop from './MyShop';
+import OrderHistory from './OrderHistory';
+
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <HashRouter basename = {process.env.PUBLIC_URL}>
+        <ScrollToTop>
+          <div className = "App">
+              <Route exact path = "/" component={Home} />
+              <Route exact path = "/signup" component={SignUp} />
+              <Route exact path = "/login" component={Login} />
+              <Route exact path = "/myshop" component={MyShop} />
+              <Route exact path = "/orderHistory" component={OrderHistory} />
+
+          </div>
+        </ScrollToTop>
+      </HashRouter>
+    );
+
+  }
 }
 
 export default App;
