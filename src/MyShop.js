@@ -7,10 +7,9 @@ export default class MyShop extends Component {
   constructor(){
     super();
     this.state = {
-
     }
-
   }
+
   render() {
     return (
 

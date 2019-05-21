@@ -9,10 +9,32 @@ import { MDBBtn } from "mdbreact";
 import Table from 'react-bootstrap/Table';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
+import DaumPostcode from 'react-daum-postcode';
+import Modal from 'react-modal';
 
-
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+}
+};
+Modal.setAppElement('body');
 
 export default class Home extends Component {
+  constructor(){
+    super();
+    this.state = {
+      modalIsOpen: false
+    }
+
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+};
 
   onSignUpClick() {
 
@@ -29,9 +51,58 @@ export default class Home extends Component {
   onOrderHistoryClick(){
 
   }
-  render() {
-    return (
+  // onSearchButtonClick() {
+  //   this.setState({
+  //     isSearchButton:true
+  //   });
+  // }
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
 
+  afterOpenModal() {
+  // references are now sync'd and can be accessed.
+  this.subtitle.style.color = 'black';
+  }
+
+  closeModal() {
+      this.setState({modalIsOpen: false});
+  }
+
+  handleAddress = (data) => {
+    let fullAddress = data.address;
+    let extraAddress = '';
+
+    if (data.addressType === 'R') {
+      if (data.bname !== '') {
+        extraAddress += data.bname;
+      }
+      if (data.buildingName !== '') {
+        extraAddress += (extraAddress !== '' ? `, ${data.buildingName}` : data.buildingName);
+      }
+      fullAddress += (extraAddress !== '' ? ` (${extraAddress})` : '');
+    }
+    console.log(fullAddress);  // e.g. '서울 성동구 왕십리로2길 20 (성수동1가)'
+  }
+
+  render() {
+    let searchLocation=null;
+    if(this.state.modalIsOpen) {
+      searchLocation=(
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+        <h2 ref={subtitle => this.subtitle = subtitle}>거리 찾기</h2>
+          <DaumPostcode onComplete={this.handleAddress}/>
+          <button onClick={this.closeModal}>close</button>
+        </Modal>
+  );
+    }
+    return (
       <section id="home">
         <div className="cover">
           <div className = "Headers">
@@ -51,17 +122,19 @@ export default class Home extends Component {
           </p>
           <InputGroup className="mb-3">
             <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">GPS</InputGroup.Text>
+              <button>GPS</button>
             </InputGroup.Prepend>
             <FormControl
             placeholder="Place"
             aria-label="place"
             aria-describedby="basic-addon1"
+            onClick={this.openModal}
             />
             <InputGroup.Append>
-              <InputGroup.Text id="basic-addon2">검색</InputGroup.Text>
-            </InputGroup.Append>
-            </InputGroup>
+              <button id="search" onClick={this.openModal}>검색</button>
+              {searchLocation}
+              </InputGroup.Append>
+          </InputGroup>
           <Table striped bordered hover>
           <thead>
             <tr>
