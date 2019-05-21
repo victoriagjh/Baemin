@@ -12,6 +12,8 @@ import FormControl from 'react-bootstrap/FormControl';
 import DaumPostcode from 'react-daum-postcode';
 import Modal from 'react-modal';
 
+declare var daum:any;
+
 const customStyles = {
   content : {
     top                   : '50%',
@@ -24,13 +26,18 @@ const customStyles = {
 };
 Modal.setAppElement('body');
 
+var locationInfo = "";
+
+
 export default class Home extends Component {
   constructor(){
     super();
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
+      deliveryLocationX:"",
+      deliveryLocationY:"",
+      deliveryString:""
     }
-
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -51,11 +58,6 @@ export default class Home extends Component {
   onOrderHistoryClick(){
 
   }
-  // onSearchButtonClick() {
-  //   this.setState({
-  //     isSearchButton:true
-  //   });
-  // }
   openModal() {
     this.setState({modalIsOpen: true});
   }
@@ -83,10 +85,37 @@ export default class Home extends Component {
       fullAddress += (extraAddress !== '' ? ` (${extraAddress})` : '');
     }
     console.log(fullAddress);  // e.g. '서울 성동구 왕십리로2길 20 (성수동1가)'
+    this.setState({deliveryString:fullAddress});
+    var geocoder = new daum.maps.services.Geocoder();
+    var resultX="";
+    var resultY="";
+    var callback = function(result, status) {
+        if (status === daum.maps.services.Status.OK) {
+          resultX = result[0].x.toString();
+          resultY = result[0].y.toString();
+          console.log(result);
+
+          locationInfo += "Address_name:" +result[0].address_name.toString() + ",";
+          locationInfo += "Building_name:" +result[0].road_address.building_name.toString() + ",";
+          locationInfo += "Main_building_no:" +result[0].road_address.main_building_no.toString() + ",";
+          locationInfo += "Region_1depth_name:" +result[0].road_address.region_1depth_name.toString() + ",";
+          locationInfo += "Region_2depth_name:" +result[0].road_address.region_2depth_name.toString() + ",";
+          locationInfo += "Region_3depth_name:" +result[0].road_address.region_3depth_name.toString() + ",";
+          locationInfo += "Road_name:" +result[0].road_address.road_name.toString() + ",";
+          locationInfo += "Sub_building_no:" +result[0].road_address.sub_building_no.toString() + ",";
+          locationInfo += "X:" +result[0].x.toString() + ",";
+          locationInfo += "Y:" +result[0].y.toString() + ",";
+          locationInfo += "Zone_no:" +result[0].road_address.zone_no.toString();
+        }
+    };
+    geocoder.addressSearch(this.state.deliveryString, callback);
   }
 
   render() {
     let searchLocation=null;
+    if(locationInfo!="") {
+      console.log(locationInfo);
+    }
     if(this.state.modalIsOpen) {
       searchLocation=(
         <Modal
@@ -121,9 +150,6 @@ export default class Home extends Component {
             <strong>배달 주소 입력</strong>
           </p>
           <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-              <button>GPS</button>
-            </InputGroup.Prepend>
             <FormControl
             placeholder="Place"
             aria-label="place"
