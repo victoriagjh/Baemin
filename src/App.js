@@ -9,7 +9,7 @@ import SignUp from './SignUp';
 import Login from './Login';
 import MyShop from './MyShop';
 import OrderHistory from './OrderHistory';
-
+import ChoiceCategory from './choiceCategory';
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +25,8 @@ class App extends Component {
               <Route exact path = "/login" component={Login} />
               <Route exact path = "/myshop" component={MyShop} />
               <Route exact path = "/orderHistory" component={OrderHistory} />
+              <Route exact path = "/choiceCategory" component={ChoiceCategory} />
+
 
           </div>
         </ScrollToTop>

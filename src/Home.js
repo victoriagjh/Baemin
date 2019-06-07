@@ -30,13 +30,14 @@ var locationInfo = "";
 
 
 export default class Home extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       modalIsOpen: false,
       deliveryLocationX:"",
       deliveryLocationY:"",
-      deliveryString:""
+      deliveryString:"",
+      category:""
     }
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
@@ -94,7 +95,6 @@ export default class Home extends Component {
           resultX = result[0].x.toString();
           resultY = result[0].y.toString();
           console.log(result);
-
           locationInfo += "Address_name:" +result[0].address_name.toString() + ",";
           locationInfo += "Building_name:" +result[0].road_address.building_name.toString() + ",";
           locationInfo += "Main_building_no:" +result[0].road_address.main_building_no.toString() + ",";
@@ -164,43 +164,44 @@ export default class Home extends Component {
           <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Table heading</th>
-              <th>Table heading</th>
-              <th>Table heading</th>
-              <th>Table heading</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
               </tr>
               </thead>
               <tbody>
                   <tr>
-                    <td>배민라이더스</td>
-                    <td>배민키친</td>
-                    <td>1인분</td>
-                    <td>테이크아웃</td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'chicken' }}>치킨</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'korean' }}>한식</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'snackbar' }}>분식</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'cafe' }}>카페&디저트</Link></td>
                   </tr>
                   <tr>
-                    <td>배민마켓</td>
-                    <td>한식</td>
-                    <td>분식</td>
-                    <td>카페&디저트</td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'japanese' }}>돈까스*회*일식</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'baeminMarket' }}>배민마켓</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'pizza' }}>피자</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'chinese' }}>중국집</Link></td>
                   </tr>
                   <tr>
-                    <td>돈까스*회*일식</td>
-                    <td>치킨</td>
-                    <td>피자</td>
-                    <td>중국집</td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'pork' }}>족발*보쌈</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'nightFood' }}>야식</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'soup' }}>찜*탕</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'dosirak' }}>도시락</Link></td>
                   </tr>
                   <tr>
-                    <td>족발*보쌈</td>
-                    <td>야식</td>
-                    <td>찜*탕</td>
-                    <td>도시락</td>
+                    <td ><Link to={{ pathname: "/choiceCategory",  data: 'baeminRiders' }}>배민라이더스</Link></td>
+                    <td ><Link to={{ pathname: "/choiceCategory",  data: 'baeminKitchen' }}>배민 키친</Link></td>
+                    <td ><Link to={{ pathname: "/choiceCategory",  data: '1serving' }}>1인분</Link></td>
+                    <td ><Link to={{ pathname: "/choiceCategory",  data: 'takeOut' }}>테이크 아웃</Link></td>
                   </tr>
                   <tr>
-                    <td>패스트푸드</td>
-                    <td>프랜차이즈</td>
-                    <td>맛집랭킹</td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'fastfood' }}>패스트푸드</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'franchise' }}>프랜차이즈</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'ranking' }}>맛집랭킹 </Link></td>
                     <td></td>
                   </tr>
+
               </tbody>
           </Table>
         </div>
