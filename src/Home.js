@@ -37,7 +37,8 @@ export default class Home extends Component {
       deliveryLocationX:"",
       deliveryLocationY:"",
       deliveryString:"",
-      category:""
+      category:"",
+      id:this.props.location.data
     }
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
@@ -112,6 +113,7 @@ export default class Home extends Component {
   }
 
   render() {
+    console.log("유저의 ID" + this.state.id);
     let searchLocation=null;
     if(locationInfo!="") {
       console.log(locationInfo);

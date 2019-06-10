@@ -6,10 +6,11 @@ import Select from 'react-select';
 import logo from './imgs/mainLogo.png';
 import './App.css';
 
+const axios = require('axios');
 
 export default class SignUp extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       isCustomer:false,
       isBoss : false,
@@ -22,8 +23,29 @@ export default class SignUp extends Component {
         {
           label: "Female",
           value: "2"
-        }]
+        }],
+      userName:"",
+      id:"",
+      password:"",
+      gender:null
     }
+    this.onSignUpClick = this.onSignUpClick.bind(this);
+
+  }
+  onSignUpClick() {
+    console.log("이제 곧 보낼거다!!");
+    axios.post('/user', {
+        userName: this.state.userName,
+        userID:this.state.id,
+        userPassword:this.state.password,
+        userGender:this.state.gender
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
   onMainLogoClick(){
 
@@ -80,10 +102,8 @@ export default class SignUp extends Component {
                 validate
                 error="wrong"
                 success="right"
+                onChange={ (e) => this.setState({ id : e.target.value })}
               />
-              <MDBBtn href="#!" className="white ml-1">
-                중복확인
-              </MDBBtn>
               <MDBInput
                 label="Your password"
                 group
@@ -114,19 +134,19 @@ export default class SignUp extends Component {
                 containerClass="mb-0"
               />
               <div className="text-center mb-3">
-                <MDBBtn
+                <Link to ="/" onClick = {this.onSignUpClick}><MDBBtn
                   type="button"
                   rounded
                   className="btn-block z-depth-1a"
                 >
                   Sign Up
-                </MDBBtn>
+                </MDBBtn></Link>
               </div>
             </MDBCardBody>
             <MDBModalFooter className="mx-5 pt-3 mb-1">
             <p className="font-small grey-text d-flex justify-content-end">
               If you are our member, Already?
-              <a href="#!" className="blue-text ml-1">
+              <a className="blue-text ml-1">
                 Login
               </a>
             </p>
@@ -156,7 +176,7 @@ export default class SignUp extends Component {
                     <i className="fa fa-user prefix"></i>
                     </span>
                     </div>
-                    <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon" />
+                    <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon" onChange={ (e) => this.setState({ userName : e.target.value })} />
                     </div>
               <MDBInput
                 label="ID"
@@ -164,35 +184,35 @@ export default class SignUp extends Component {
                 validate
                 error="wrong"
                 success="right"
+                onChange={ (e) => this.setState({ id : e.target.value })}
               />
-              <MDBBtn href="#!" className="white ml-1">
-                중복확인
-              </MDBBtn>
               <MDBInput
                 label="Your password"
                 group
                 type="password"
                 validate
                 containerClass="mb-0"
+                onChange={ (e) => this.setState({ password : e.target.value })}
               />
               <Select
                 options={this.state.genders}
-                selected="Choose your Gender"/>
+                selected="Choose your Gender"
+                onChange={ (e) => this.setState({ gender : e.label })}/>
                 <p/>
               <div className="text-center mb-3">
-                <MDBBtn
+                <Link to ={{pathname: "/", data:this.state.id}} onClick = {this.onSignUpClick}><MDBBtn
                   type="button"
                   rounded
                   className="btn-block z-depth-1a"
                 >
                   Sign Up
-                </MDBBtn>
+                </MDBBtn></Link>
               </div>
             </MDBCardBody>
             <MDBModalFooter className="mx-5 pt-3 mb-1">
             <p className="font-small grey-text d-flex justify-content-end">
               If you are our member, Already?
-              <a href="#!" className="blue-text ml-1">
+              <a className="blue-text ml-1">
                 Login
               </a>
             </p>
@@ -217,8 +237,7 @@ export default class SignUp extends Component {
             color="white"
             rounded
             className="mr-md-3 z-depth-1a"
-            onClick = {this.onCustomerClick.bind(this)}
-          >
+            onClick = {this.onCustomerClick.bind(this)}>
           고객 SignUp
           </MDBBtn>
           <MDBBtn
