@@ -141,9 +141,7 @@ export default class Home extends Component {
           <Link to="/myshop" onClick={this.onMyShopClick.bind(this)}><MDBBtn>찜한 가게</MDBBtn></Link>
           <Link to="/orderHistory" onClick={this.onOrderHistoryClick.bind(this)}><MDBBtn>주문 내역</MDBBtn></Link>
           </div>
-          <div className="contents">
-            <h2 className="subtitle">메인화면</h2>
-          </div>
+
         </div>
         <div className="description">
           <p>
@@ -173,14 +171,14 @@ export default class Home extends Component {
               <tbody>
                   <tr>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'chicken' }}>치킨</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'korean' }}>한식</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'pizza' }}>피자</Link></td>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'snackbar' }}>분식</Link></td>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'cafe' }}>카페&디저트</Link></td>
                   </tr>
                   <tr>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'japanese' }}>돈까스*회*일식</Link></td>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'baeminMarket' }}>배민마켓</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'pizza' }}>피자</Link></td>
+                    <td><Link to={{ pathname: "/choiceCategory",  data: 'korean' }}>한식</Link></td>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'chinese' }}>중국집</Link></td>
                   </tr>
                   <tr>
@@ -201,7 +199,6 @@ export default class Home extends Component {
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'ranking' }}>맛집랭킹 </Link></td>
                     <td></td>
                   </tr>
-
               </tbody>
           </Table>
         </div>
