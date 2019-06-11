@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter} from 'mdbreact';
 import Select from 'react-select';
 
@@ -27,7 +27,8 @@ export default class SignUp extends Component {
       name:"",
       username:"",
       password:"",
-      gender:null
+      gender:null,
+      okay:false
     }
     this.onSignUpClick = this.onSignUpClick.bind(this);
 
@@ -45,6 +46,13 @@ export default class SignUp extends Component {
       }
     }).then(response => {
       console.log(response);
+      if(response.data.result == "error") {
+        alert(response.data.result_message);
+
+      } else if(response.data.result == "success") {
+        this.setState({okay:true});
+        alert("회원이 되신 것을 축하합니다!");
+      }
     }).catch (err => {console.log(err)});
   }
   onMainLogoClick(){
@@ -75,6 +83,10 @@ export default class SignUp extends Component {
     console.log("RiderClick");
   }
   render() {
+    let changeThePage = null;
+    if(this.state.okay == true ) {
+      return <Redirect to ={{ pathname: "/",  data: this.state.username }} />
+    }
     let switchedForUserType = null;
     if(this.state.isBoss) {
       switchedForUserType =   (
@@ -134,13 +146,15 @@ export default class SignUp extends Component {
                 containerClass="mb-0"
               />
               <div className="text-center mb-3">
-                <Link to ="/" onClick = {this.onSignUpClick}><MDBBtn
+                <Link to ="/" onClick = {this.onSignUpClick}>
+                  <MDBBtn
                   type="button"
                   rounded
                   className="btn-block z-depth-1a"
                 >
                   Sign Up
-                </MDBBtn></Link>
+                </MDBBtn>
+              </Link>
               </div>
             </MDBCardBody>
             <MDBModalFooter className="mx-5 pt-3 mb-1">
@@ -200,13 +214,14 @@ export default class SignUp extends Component {
                 onChange={ (e) => this.setState({ gender : e.value })}/>
                 <p/>
               <div className="text-center mb-3">
-                <Link to ={{pathname: "/", data:this.state.username}} onClick = {this.onSignUpClick}><MDBBtn
+                  <MDBBtn
                   type="button"
                   rounded
                   className="btn-block z-depth-1a"
+                  onClick = {this.onSignUpClick}
                 >
                   Sign Up
-                </MDBBtn></Link>
+                </MDBBtn>
               </div>
             </MDBCardBody>
             <MDBModalFooter className="mx-5 pt-3 mb-1">
@@ -260,6 +275,8 @@ export default class SignUp extends Component {
           </MDBBtn>
         </div>
         {switchedForUserType}
+        {changeThePage}
+
       </section>
     );
   }

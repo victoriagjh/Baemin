@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody } from 'mdbreact';
 
 import './App.css';
 import './Myshop.css';
@@ -8,7 +8,6 @@ import './Myshop.css';
 import logo from './imgs/mainLogo.png';
 
 import black from './imgs/blackbean.jpg';
-import MyModal from './MyModal';
 import Tteokbokki from './imgs/Tteokbokki.jpg';
 import chicken from './imgs/chicken.jpeg';
 import pizzaheaven from './imgs/pizzaheaven.jpg';

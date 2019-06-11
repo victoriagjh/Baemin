@@ -38,7 +38,7 @@ export default class Home extends Component {
       deliveryLocationY:"",
       deliveryString:"",
       category:"",
-      id:this.props.location.data
+      username:this.props.location.data
     }
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
@@ -113,7 +113,15 @@ export default class Home extends Component {
   }
 
   render() {
-    console.log("유저의 ID" + this.state.id);
+    console.log("유저의 ID " + this.state.username);
+
+    let userInfo = null;
+    if(this.state.username !== undefined) {
+      userInfo=(<h5 style={{fontWeight: "bold" , color : "#36B8CF"}}> {this.state.username} 님 환영합니다!</h5>);
+    } else {
+      userInfo=(<h5 style={{fontWeight: "bold" , color : "#36B8CF"}}>로그인 해주세요</h5>);
+    }
+
     let searchLocation=null;
     if(locationInfo!="") {
       console.log(locationInfo);
@@ -142,12 +150,13 @@ export default class Home extends Component {
           <Link to="/signup" onClick={this.onSignUpClick.bind(this)}><MDBBtn>회원가입</MDBBtn></Link>
           <Link to="/myshop" onClick={this.onMyShopClick.bind(this)}><MDBBtn>찜한 가게</MDBBtn></Link>
           <Link to="/orderHistory" onClick={this.onOrderHistoryClick.bind(this)}><MDBBtn>주문 내역</MDBBtn></Link>
+          {userInfo}
           </div>
 
         </div>
         <div className="description">
           <p>
-            <strong>배달 주소 입력</strong>
+            <strong style={{fontWeight: "bold" , color : "#36B8CF"}}>배달 주소 입력</strong>
           </p>
           <InputGroup className="mb-3">
             <FormControl
@@ -157,7 +166,7 @@ export default class Home extends Component {
             onClick={this.openModal}
             />
             <InputGroup.Append>
-              <button id="search" onClick={this.openModal}>검색</button>
+              <button id="search" onClick={this.openModal} style={{fontWeight: "bold" , color : "#36B8CF"}}>검색</button>
               {searchLocation}
               </InputGroup.Append>
           </InputGroup>
@@ -172,7 +181,7 @@ export default class Home extends Component {
               </thead>
               <tbody>
                   <tr>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'chicken' }}>치킨</Link></td>
+                    <td ><Link to={{ pathname: "/choiceCategory",  data: 'chicken' }}>치킨</Link></td>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'pizza' }}>피자</Link></td>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'snackbar' }}>분식</Link></td>
                     <td><Link to={{ pathname: "/choiceCategory",  data: 'cafe' }}>카페&디저트</Link></td>
