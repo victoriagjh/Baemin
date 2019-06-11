@@ -26,8 +26,6 @@ class App extends Component {
               <Route exact path = "/myshop" component={MyShop} />
               <Route exact path = "/orderHistory" component={OrderHistory} />
               <Route exact path = "/choiceCategory" component={ChoiceCategory} />
-
-
           </div>
         </ScrollToTop>
       </HashRouter>

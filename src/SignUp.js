@@ -18,14 +18,14 @@ export default class SignUp extends Component {
       genders: [
         {
           label: "Male",
-          value: "1"
+          value: 2
         },
         {
           label: "Female",
-          value: "2"
+          value: 1
         }],
-      userName:"",
-      id:"",
+      name:"",
+      username:"",
       password:"",
       gender:null
     }
@@ -33,19 +33,19 @@ export default class SignUp extends Component {
 
   }
   onSignUpClick() {
-    console.log("이제 곧 보낼거다!!");
-    axios.post('/user', {
-        userName: this.state.userName,
-        userID:this.state.id,
-        userPassword:this.state.password,
-        userGender:this.state.gender
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    axios("http://localhost:8000/accounts/api/register/", {
+      method: 'post',
+      withCredentials: true,
+      data: {
+        name: this.state.name,
+        username: this.state.username,
+        password1: this.state.password,
+        password2: this.state.password,
+        gender: this.state.gender
+      }
+    }).then(response => {
+      console.log(response);
+    }).catch (err => {console.log(err)});
   }
   onMainLogoClick(){
 
@@ -176,7 +176,7 @@ export default class SignUp extends Component {
                     <i className="fa fa-user prefix"></i>
                     </span>
                     </div>
-                    <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon" onChange={ (e) => this.setState({ userName : e.target.value })} />
+                    <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon" onChange={ (e) => this.setState({ name : e.target.value })} />
                     </div>
               <MDBInput
                 label="ID"
@@ -184,7 +184,7 @@ export default class SignUp extends Component {
                 validate
                 error="wrong"
                 success="right"
-                onChange={ (e) => this.setState({ id : e.target.value })}
+                onChange={ (e) => this.setState({ username : e.target.value })}
               />
               <MDBInput
                 label="Your password"
@@ -197,10 +197,10 @@ export default class SignUp extends Component {
               <Select
                 options={this.state.genders}
                 selected="Choose your Gender"
-                onChange={ (e) => this.setState({ gender : e.label })}/>
+                onChange={ (e) => this.setState({ gender : e.value })}/>
                 <p/>
               <div className="text-center mb-3">
-                <Link to ={{pathname: "/", data:this.state.id}} onClick = {this.onSignUpClick}><MDBBtn
+                <Link to ={{pathname: "/", data:this.state.username}} onClick = {this.onSignUpClick}><MDBBtn
                   type="button"
                   rounded
                   className="btn-block z-depth-1a"
