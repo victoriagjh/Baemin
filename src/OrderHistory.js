@@ -149,10 +149,10 @@ closeModal() {
                 <h3 className="dark-grey-text mb-5">
                     <strong>주문내역</strong>
                </h3>
-                <p>불닭 & 갈비치킨 : 18,900원</p>
-                <p>눈꽃치즈 스테이크 피자 : 24,900원</p>
-                <p>쉬림프디럭스 : 17,900원</p>
-                <p>총 : 61,700원</p>
+                <p>불닭 & 갈비치킨 피자: 18,900원</p>
+                <p>사대천왕 피자 : 22,900원</p>
+                <p>콘샐러드 : 1,500원</p>
+                <p>총 : 43,300원</p>
 
                 <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
             </div>

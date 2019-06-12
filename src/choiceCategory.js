@@ -54,6 +54,10 @@ export default class ChoiceCategory extends Component {
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
+  onLikeClick(){
+    alert('찜한가게에 등록했습니다.');
+  }
+
   onMainLogoClick(){
 
   }
@@ -143,6 +147,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">밀라노텐 치킨</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -152,6 +157,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">네네치킨 서천점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.3  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -161,6 +167,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">KFC 영통 씨네마점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 10+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -170,6 +177,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">올레치킨피자 본점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.6  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -179,6 +187,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">호식이 두마리 치킨 신영통점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.0  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -188,6 +197,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">치킨마루 수원영통경희대점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7 |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -197,6 +207,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">처갓집 양념치킨 영통점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4 |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -206,6 +217,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">치킨플러스 수원 영통점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -215,6 +227,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">칰칰 펍펍</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -224,6 +237,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">쌀쌀맞은 닭 수원 경희대점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.6  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
             </tbody>
@@ -241,6 +255,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">착한피자 수원영통점 [쿠폰]</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.9  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -250,6 +265,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">밀라노텐 피자</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -259,6 +275,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">피자알볼로 흥덕점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -266,8 +283,11 @@ export default class ChoiceCategory extends Component {
                     <input type = "image"  src={heaven}  width='100px' align = "left" value="Open"/>
                   </td>
                   <td>
+                    <Link to={{ pathname: "/menu",  data: 'pizzzHeaven' }}>
                     <h5   margin-left="auto" margin-right= "auto">김준현의 피자헤븐 수원영통점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4  |  최근리뷰 50+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                    </Link>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -277,6 +297,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">뽕뜨락피자 영통점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7  |  최근리뷰 50+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -295,6 +316,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">피자펍</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8 |  최근리뷰 20+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -304,6 +326,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">피자헛 영통로점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.3  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -313,6 +336,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">유코로피자 수원매탄></h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.9  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
                 <tr vertical-align= "middle">
@@ -322,6 +346,7 @@ export default class ChoiceCategory extends Component {
                   <td>
                     <h5   margin-left="auto" margin-right= "auto">프리프리피자 영통점</h5>
                     <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                   </td>
                 </tr>
             </tbody>
@@ -339,6 +364,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">100가지 정성을 담은 떡볶이</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.9  |  최근리뷰 100+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -348,6 +374,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">스쿨푸드 영통딜리버리점</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 100+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -357,6 +384,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">마초떡볶이</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4  |  최근리뷰 100+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -366,6 +394,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">마피아떡볶이 영통점</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4  |  최근리뷰 50+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -375,6 +404,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">오떡 망포신영통점</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7  |  최근리뷰 50+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -384,6 +414,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">차또르 떡볶이</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.5 |  최근리뷰 50+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -393,6 +424,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">추억의 국민학교 떡볶이</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8 |  최근리뷰 20+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -402,6 +434,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">마퐁떡볶이</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.3  |  최근리뷰 100+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -411,6 +444,7 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">김밥앤떡볶이></h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.9  |  최근리뷰 100+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
                   <tr vertical-align= "middle">
@@ -420,9 +454,118 @@ export default class ChoiceCategory extends Component {
                     <td>
                       <h5   margin-left="auto" margin-right= "auto">292짬떡 떡볶이 본점</h5>
                       <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7  |  최근리뷰 100+</h5>
+                      <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
                     </td>
                   </tr>
               </tbody>
+          </Table>
+        );
+      }
+      else {
+        storeTable = (
+          <Table striped bordered hover>
+            <tbody>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">밀라노텐 치킨</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={naenae}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">네네치킨 서천점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.3  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={KFC}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">KFC 영통 씨네마점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 10+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={olleh}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">올레치킨피자 본점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.6  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={hosigi}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">호식이 두마리 치킨 신영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.0  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={chickenmaru}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">치킨마루 수원영통경희대점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7 |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={cheogazip}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">처갓집 양념치킨 영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4 |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={chickenplus}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">치킨플러스 수원 영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">칰칰 펍펍</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={sal}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">쌀쌀맞은 닭 수원 경희대점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.6  |  최근리뷰 100+</h5>
+                    <input type= 'BUTTON' name="btn2" value="좋아요" onClick={() => this.onLikeClick()}></input>
+                  </td>
+                </tr>
+            </tbody>
           </Table>
         );
       }
