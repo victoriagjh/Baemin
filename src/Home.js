@@ -3,8 +3,27 @@ import { Link } from "react-router-dom";
 
 import './App.css';
 import './Home.css';
-import logo from './imgs/mainLogo.png';
 
+import logo from './imgs/mainLogo.png';
+import rider from './homeicon/rider.png';
+import korea_food from './homeicon/korea_food.png';
+import cafe from './homeicon/cafe.png';
+import snackbar from './homeicon/snackbar.png';
+import japanese from './homeicon/japanese.png';
+import chicken from './homeicon/chicken.png';
+import chinese from './homeicon/chinese.png';
+import pizza from './homeicon/pizza.png';
+import pork from './homeicon/pork.png';
+import night from './homeicon/night.png';
+import soup from './homeicon/soup.png';
+import lunchbox from './homeicon/lunchbox.png';
+import fastfood from './homeicon/fastfood.png';
+import franchise from './homeicon/franchise.png';
+import rank from './homeicon/rank.png';
+import kitchen from './homeicon/kitchen.png';
+import one from './homeicon/one.png';
+import takeout from './homeicon/takeout.png';
+import market from './homeicon/market.png';
 import { MDBBtn } from "mdbreact";
 import Table from 'react-bootstrap/Table';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -180,36 +199,36 @@ export default class Home extends Component {
               </tr>
               </thead>
               <tbody>
-                  <tr>
-                    <td ><Link to={{ pathname: "/choiceCategory",  data: 'chicken' }}>치킨</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'pizza' }}>피자</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'snackbar' }}>분식</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'cafe' }}>카페&디저트</Link></td>
-                  </tr>
-                  <tr>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'japanese' }}>돈까스*회*일식</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'baeminMarket' }}>배민마켓</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'korean' }}>한식</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'chinese' }}>중국집</Link></td>
-                  </tr>
-                  <tr>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'pork' }}>족발*보쌈</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'nightFood' }}>야식</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'soup' }}>찜*탕</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'dosirak' }}>도시락</Link></td>
-                  </tr>
-                  <tr>
-                    <td ><Link to={{ pathname: "/choiceCategory",  data: 'baeminRiders' }}>배민라이더스</Link></td>
-                    <td ><Link to={{ pathname: "/choiceCategory",  data: 'baeminKitchen' }}>배민 키친</Link></td>
-                    <td ><Link to={{ pathname: "/choiceCategory",  data: '1serving' }}>1인분</Link></td>
-                    <td ><Link to={{ pathname: "/choiceCategory",  data: 'takeOut' }}>테이크 아웃</Link></td>
-                  </tr>
-                  <tr>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'fastfood' }}>패스트푸드</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'franchise' }}>프랜차이즈</Link></td>
-                    <td><Link to={{ pathname: "/choiceCategory",  data: 'ranking' }}>맛집랭킹 </Link></td>
-                    <td></td>
-                  </tr>
+                <tr>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'chicken' }}><img src={chicken} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'pizza' }}><img src={pizza} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'snackbar' }}><img src={snackbar} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'cafe' }}><img src={cafe} width = '100px' heigth = "200"/> <br></br></Link></td>
+                </tr>
+                <tr>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'japanese' }}><img src={japanese} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'baeminMarket' }}><img src={market} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'korean' }}><img src={korea_food} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'chinese' }}><img src={chinese} width = '100px' heigth = "200"/> <br></br></Link></td>
+                </tr>
+                <tr>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'pork' }}><img src={pork} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'nightFood' }}><img src={night} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'soup' }}><img src={soup} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'dosirak' }}><img src={lunchbox} width = '100px' heigth = "200"/> <br></br></Link></td>
+                </tr>
+                <tr>
+                  <td ><Link to={{ pathname: "/choiceCategory",  data: 'baeminRiders' }}><img src={rider} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td ><Link to={{ pathname: "/choiceCategory",  data: 'baeminKitchen' }}><img src={kitchen} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td ><Link to={{ pathname: "/choiceCategory",  data: '1serving' }}><img src={one} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td ><Link to={{ pathname: "/choiceCategory",  data: 'takeOut' }}><img src={takeout} width = '100px' heigth = "200"/> <br></br></Link></td>
+                </tr>
+                <tr>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'fastfood' }}><img src={fastfood} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'franchise' }}><img src={franchise} width = '100px' heigth = "200"/> <br></br></Link></td>
+                  <td><Link to={{ pathname: "/choiceCategory",  data: 'ranking' }}><img src={rank} width = '100px' heigth = "200"/> <br></br> </Link></td>
+                  <td></td>
+                </tr>
               </tbody>
           </Table>
         </div>
