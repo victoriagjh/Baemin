@@ -9,6 +9,20 @@ import chicken from './imgs/chicken.png';
 import pizza from './imgs/pizza.png';
 import snackfood from './imgs/snackfood.png';
 
+import naenae from './imgs/naenae.png';
+import KFC from './imgs/KFC.png';
+import olleh from './imgs/olleh.jpg';
+import hosigi from './imgs/hosigi.png';
+import chickenmaru from './imgs/chickenmaru.png';
+import cheogazip from './imgs/cheogazip.png';
+import chickenplus from './imgs/chickenplus.jpg';
+import sal from './imgs/sal.png';
+
+import goodpizza from './imgs/goodpizza.png';
+import Pizzaalvolo from './imgs/Pizzaalvolo.png';
+import BBang from './imgs/BBang.png';
+import pizzahut from './imgs/pizzahut.jpeg';
+import heaven from './imgs/heaven.png';
 
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
@@ -121,196 +135,196 @@ export default class ChoiceCategory extends Component {
       if(this.state.category === "chicken") {
         storeTable = (
           <Table striped bordered hover>
-              <tbody>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">밀라노텐 치킨</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">네네치킨 서천점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.3  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">KFC 영통 씨네마점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 10+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">올레치킨피자 본점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.6  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">호식이 두마리 치킨 신영통점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.0  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">치킨마루 수원영통경희대점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7 |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">처갓집 양념치킨 영통점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4 |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">치킨플러스 수원 영통점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">칰칰 펍펍</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">쌀쌀맞은 닭 수원 경희대점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.6  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-              </tbody>
+            <tbody>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">밀라노텐 치킨</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={naenae}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">네네치킨 서천점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.3  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={KFC}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">KFC 영통 씨네마점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 10+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={olleh}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">올레치킨피자 본점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.6  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={hosigi}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">호식이 두마리 치킨 신영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.0  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={chickenmaru}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">치킨마루 수원영통경희대점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7 |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={cheogazip}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">처갓집 양념치킨 영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4 |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={chickenplus}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">치킨플러스 수원 영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={chicken}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">칰칰 펍펍</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={sal}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">쌀쌀맞은 닭 수원 경희대점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.6  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+            </tbody>
           </Table>
         );
       }
       else if(this.state.category === "pizza") {
         storeTable = (
           <Table striped bordered hover>
-              <tbody>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">착한피자 수원영통점 [쿠폰]</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.9  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">밀라노텐 피자</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">피자알볼로 흥덕점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">김준현의 피자헤븐 수원영통점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4  |  최근리뷰 50+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">뽕뜨락피자 영통점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7  |  최근리뷰 50+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">올레피자치킨 본점 [쿠폰]</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.5 |  최근리뷰 50+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">피자펍</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8 |  최근리뷰 20+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">피자헛 영통로점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.3  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">유코로피자 수원매탄></h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.9  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-                  <tr vertical-align= "middle">
-                    <td width = "100px">
-                      <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
-                    </td>
-                    <td>
-                      <h5   margin-left="auto" margin-right= "auto">프리프리피자 영통점</h5>
-                      <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
-                    </td>
-                  </tr>
-              </tbody>
+            <tbody>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={goodpizza}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">착한피자 수원영통점 [쿠폰]</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.9  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">밀라노텐 피자</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.1  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={Pizzaalvolo}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">피자알볼로 흥덕점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={heaven}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">김준현의 피자헤븐 수원영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.4  |  최근리뷰 50+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={BBang}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">뽕뜨락피자 영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.7  |  최근리뷰 50+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={olleh}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">올레피자치킨 본점 [쿠폰]</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.5 |  최근리뷰 50+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">피자펍</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8 |  최근리뷰 20+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={pizzahut}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">피자헛 영통로점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.3  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">유코로피자 수원매탄></h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.9  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+                <tr vertical-align= "middle">
+                  <td width = "100px">
+                    <input type = "image"  src={pizza}  width='100px' align = "left" value="Open"/>
+                  </td>
+                  <td>
+                    <h5   margin-left="auto" margin-right= "auto">프리프리피자 영통점</h5>
+                    <h5   className="btn-block z-depth-1a" margin-left="auto" margin-right= "auto"> ✩ 4.8  |  최근리뷰 100+</h5>
+                  </td>
+                </tr>
+            </tbody>
           </Table>
         );
       }

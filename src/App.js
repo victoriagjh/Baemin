@@ -10,6 +10,7 @@ import Login from './Login';
 import MyShop from './MyShop';
 import OrderHistory from './OrderHistory';
 import ChoiceCategory from './choiceCategory';
+import Menu from './menu';
 
 class App extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class App extends Component {
               <Route exact path = "/myshop" component={MyShop} />
               <Route exact path = "/orderHistory" component={OrderHistory} />
               <Route exact path = "/choiceCategory" component={ChoiceCategory} />
+              <Route exact path = "/menu" component={Menu} />
           </div>
         </ScrollToTop>
       </HashRouter>
