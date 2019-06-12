@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 
 import './App.css';
 import logo from './imgs/mainLogo.png';
@@ -39,9 +39,11 @@ export default class Menu extends Component {
       storeName:this.props.location.data,
       address:"",
       total:0,
-      menus:""
+      menus:"",
+      orderSuccess:false
     }
     this.onMenuCheckBoxChange = this.onMenuCheckBoxChange.bind(this);
+    this.onOrderClick = this.onOrderClick.bind(this);
 
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
@@ -61,6 +63,10 @@ export default class Menu extends Component {
 
   closeModal() {
       this.setState({modalIsOpen: false});
+  }
+  onOrderClick() {
+    alert("주문 성공!");
+    this.setState({orderSuccess:true});
   }
   onMenuCheckBoxChange = (changeEvent) => {
      let a = {
@@ -123,7 +129,9 @@ export default class Menu extends Component {
 
   render() {
     let searchLocation=null;
-
+    if(this.state.orderSuccess == true) {
+      return <Redirect to ={{ pathname: "/",  data: this.state.username }} />
+    }
     if(this.state.modalIsOpen) {
       searchLocation=(
         <Modal
@@ -822,7 +830,7 @@ export default class Menu extends Component {
               </tbody>
             </Table>
           <div>
-            <Link to ='/'><MDBBtn>주문하기!</MDBBtn></Link>
+            <MDBBtn onClick ={this.onOrderClick}>주문하기!</MDBBtn>
           </div>
 
         </div>
